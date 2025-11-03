@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const userRoutes = require('./routes/userRoutes');
+const emotionRoutes = require('./routes/emotionRoutes');
 
 const connectDB = require('./dbconfig');
 const port = 3000;
@@ -17,6 +18,7 @@ app.get('/',(req,res)=>{
 });
 
 app.use('/api', userRoutes);
+app.use('/api', emotionRoutes);
 
 app.listen(port,()=>{
     console.log('server is running on port 3000')
