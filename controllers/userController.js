@@ -37,7 +37,7 @@ exports.registerUser = async (req, res) => {
 
     // --- 6. Send a successful response (excluding the hashed password) ---
     res.status(201).json({ 
-      message: 'User registered successfully!', 
+      message: 'User registered successfully New!', 
       user: {
         id: user._id,
         username: user.username,
